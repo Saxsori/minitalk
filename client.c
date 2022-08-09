@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abrar <abrar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 16:31:51 by aaljaber          #+#    #+#             */
-/*   Updated: 2021/11/13 17:05:17 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/05/01 08:08:13 by abrar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 0;
-	pid = ft_atoi(argv[1]);
 	if (argc == 3)
 	{
+		pid = ft_atoi(argv[1]);
 		while (argv[2][i] != '\0')
 			sendmsg(argv[2][i++], pid);
 		exit(0);

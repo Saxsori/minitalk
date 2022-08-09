@@ -10,13 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-SSM	= server.c
+SSM = ./SRC/Mandatory/server.c
 
-CSM = client.c 
+CSM = ./SRC/Mandatory/client.c 
 
-SSB = server_bonus.c
+SSB = ./SRC/Bonus/server_bonus.c
 
-CSB = client_bonus.c
+CSB = ./SRC/Mandatory/client_bonus.c
 
 SOM		= $(SSM:.c=.o)
 COM		= $(CSM:.c=.o)
@@ -33,27 +33,27 @@ all : 		server client
 bonus : serverb clientb
 
 serverb : 
-			${MAKE} -C ./libft
-			$(CC) $(CFLAGS) $(SSB) ./libft/libft.a -o server
+			${MAKE} -C ./LIB/libft
+			$(CC) $(CFLAGS) $(SSB) ./LIB/libft/libft.a -o server
 
 clientb : 
-			${MAKE} -C ./libft
-			$(CC) $(CFLAGS) $(CSB) ./libft/libft.a -o client
+			${MAKE} -C ./LIB/libft
+			$(CC) $(CFLAGS) $(CSB) ./LIB/libft/libft.a -o client
 			
 server :
-			${MAKE} -C ./libft
-			$(CC) $(CFLAGS) $(SSM) ./libft/libft.a -o server
+			${MAKE} -C ./LIB/libft
+			$(CC) $(CFLAGS) $(SSM) ./LIB/libft/libft.a -o server
 
 client :
-			${MAKE} -C ./libft
-			$(CC) $(CFLAGS) $(CSM) ./libft/libft.a -o client
+			${MAKE} -C ./LIB/libft
+			$(CC) $(CFLAGS) $(CSM) ./LIB/libft/libft.a -o client
 
 clean :
-		${MAKE} clean -C ./libft
+		${MAKE} clean -C ./LIB/libft
 		$(RM) $(SOM) $(COM) ${SOB} ${COB}
 		
 fclean :	clean
-		$(RM) server client ./libft/libft.a
+		$(RM) server client ./LIB/libft/libft.a
 
 re : 	fclean  all 
 

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abrar <abrar@student.42.fr>                +#+  +:+       +#+         #
+#    By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 17:00:26 by aaljaber          #+#    #+#              #
-#    Updated: 2022/05/01 08:00:24 by abrar            ###   ########.fr        #
+#    Updated: 2022/08/09 14:20:02 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,4 +57,3 @@ fclean :	clean
 
 re : 	fclean  all 
 
-.PHONY: all .c.o clean fclean re 
